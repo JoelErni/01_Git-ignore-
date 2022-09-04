@@ -4,30 +4,38 @@
 		<title>Git CheatSheet - 2022</title>
 		<link rel="stylesheet" href="/styles.css">
 	</head>
-	<body>
+	<body id="body">
 		<h1>Git - Cheatsheet by Joel Erni</h1>
-		<h2>Inhalt:</h2>
-		<ol>
-			<li>Installation</li>
-			<li>Configuration</li>
-			<li>git Clone</li>
-			<li>git Pull</li>
-			<li>git Commit</li>
-			<li>git Push</li>
-		</ol>
 		<h2>1. Installation</h2>
 		<p>Gehe auf <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>, und lade die 64x Downloader oder so herunter</p>
 		<h2>2. Cheatsheet</h2>
+		<p>Alle Befehle werden im Powershell ausgeführt</p>
+		<h3>Config</h3>
+		<p>git config --global user.name "John Doe" = Benutzername angeben</p>
+		<p>git config --global user.email johndoe@example.com = Email angeben</p>
 		<h3><strong>General</strong></h3>
-		<p>"cd /pfad" = change directory</p>
-		<p>"cd /" = change to root</p>
+		<p>"git pull" = aktualisiert mit dem Repository</p>
+		<p>"cd /pfad" = Verzeichnis ändern</p>
+		<p>"cd /" = Verzeichnis zu root ändern</p>
 		<p>"git clone" = repository klonen</p>
-		<p>"git add *" = adds all file</p>
-		<p>"git commit -m "message" " = commit with message</p>
-		<p>"git push" = push to repository</p>
+		<p>"git add *" = neue Dateien hinzufügen</p>
+		<p>"git commit -m "message" " = commit mit message</p>
+		<p>"git push" = commitn zu Repository pushen</p>
 		<h3><strong>Branches</strong></h3>
-		<p>"git branch _branchname_" = create branch</p>
-		<p>"git checkout _branchname_" = change branch</p>
-		<p>"git merge _branchname_" = merge branches</p>
+		<p>git push --set-upstream origin _branchname_ = neuer branch pushen</p>
+		<p>"git branch _branchname_" = branch erstellen</p>
+		<p>"git checkout _branchname_" = branch wechseln</p>
+		<p>"git merge _branchname_" = branches mergen</p>
 	</body>
+	<script>
+		setInterval(() => {
+			background()
+		}, 5);
+
+		var dvg = 0
+		function background(){
+			dvg+=0.1
+			document.querySelector("body").style.background = `linear-gradient(${dvg}deg, #FF0000,#FFFF00, #00FF00,#00FFFF, #0000FF,#FF00FF)`
+		}
+	</script>
 </html>
